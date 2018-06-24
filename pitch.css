@@ -1,0 +1,173 @@
+.pitchArea{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: -1px;
+  left: 45px;
+  display: none;
+}
+
+.panel-song .LyricPlay_wrap_pitch #lyricBox .auto-songName {
+  width: 80px;
+  top: -4px;
+  left: 9px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.LyricPlay_wrap_pitch .LyricPlay_wrap {
+  position: relative;
+  left: 88px;
+}
+
+#pitch_identify{
+  display: none;
+  width: 80px;
+  line-height: 28px;
+}
+.pitch_identifying #pitch_identify:after{
+  content: '';
+  display: block;
+  width: 78px;
+  height: 10px;
+  background-image: url(/static/room/modules/pitch/image/identifying.png);
+  background-repeat: no-repeat;
+  background-size: 78px auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pitch_identifying 2s 0s ease both infinite;
+  -moz-animation: pitch_identifying 2s 0s ease both infinite;
+  -webkit-animation: pitch_identifying 2s 0s ease both infinite;
+  -o-animation: pitch_identifying 2s 0s ease both infinite;
+}
+#pitch_identify h3{
+  color: #333;
+  font-size: 12px;
+  display: block;
+}
+#pitch_identify,
+.pitch_score_line{
+  width: 84px;
+  height: 59px;
+  position: relative;
+  z-index: 2;
+  border-right: 1px solid #F1F1F1;
+}
+.pitch_score_line{
+  color: #999;
+  font-size: 12px;
+  line-height: 28px;
+  position: relative;
+  z-index: 2;
+}
+#pitch_score{
+  font-size: 12px;
+  color: #f66;
+  display: inline-block;
+  width: 25px;
+  text-align: left;
+}
+.pitch_identifying #pitch_identify{
+  display: block;
+  overflow: hidden;
+  height: 50px;
+}
+.pitch_identifying .pitch_score_line{
+  display: none;
+}
+#pitchCanvas{
+  position: absolute;
+  left: 48px;
+}
+
+.pitchGradeIcon{
+  position: absolute;
+  left: 88px;
+  top: -12px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
+  display: block;
+  width: 52px;
+  height: 16px;
+
+  animation: pitch_fadeInUp 2s 0s ease both;
+  -webkit-animation: pitch_fadeInUp 2s 0s ease both;
+  -moz-animation: pitch_fadeInUp 2s 0s ease both;
+}
+.pitchGrade_sss{
+  background-image: url(/static/room/modules/pitch/image/greateRed.png);
+}
+.pitchGrade_ss{
+  background-image: url(/static/room/modules/pitch/image/perfectRed.png);
+}
+.pitchGrade_s{
+  background-image: url(/static/room/modules/pitch/image/goodRed.png);
+}
+
+@-webkit-keyframes pitch_fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(16px)
+  }
+  25%, 75% {
+    opacity: 1;
+    -webkit-transform: translateY(0)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0)
+  }
+}
+
+@-moz-keyframes pitch_fadeInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(16px)
+  }
+  25%, 75% {
+    opacity: 1;
+    -moz-transform: translateY(0)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0)
+  }
+}
+
+@-ms-keyframes pitch_fadeInUp {
+  0% {
+    opacity: 0;
+    -ms-transform: translateY(16px)
+  }
+  25%, 75% {
+    opacity: 1;
+    -ms-transform: translateY(0)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0)
+  }
+}
+
+@keyframes pitch_identifying {
+  0% {transform: translateY(-8px);}
+  100% {transform: translateY(50px);}
+}
+/* Safari 和 Chrome */
+@-webkit-keyframes pitch_identifying {
+  0% {-webkit-transform: translateY(-8px);}
+  100% {-webkit-transform: translateY(50px);}
+}
+/* Firefox */
+@-moz-keyframes pitch_identifying {
+  0% {-moz-transform: translateY(-8px);}
+  100% {-moz-transform: translateY(50px);}
+}
+/* Opera */
+@-o-keyframes pitch_identifying {
+  0% {-o-transform: translateY(-8px);}
+  100% {-o-transform: translateY(50px);}
+}
